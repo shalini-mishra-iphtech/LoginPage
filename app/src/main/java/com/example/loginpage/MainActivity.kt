@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.loginpage.fragment.LoginFragment
+import com.example.loginpage.fragment.RegisterFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,10 +19,20 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        fun loadFragment(fragment: Fragment) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment)  // add fragment_container is in activity_main.xml
-                .commit()
-        }
+       // loadFragment(LoginFragment())
+        loadFragment(RegisterFragment())
     }
+   /*fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.login_container, fragment)  // add fragment_container is in activity_main.xml
+            .commit()
+    }
+
+*/
+    fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.register_container, fragment)  // add fragment_container is in activity_main.xml
+            .commit()
+    }
+
 }
