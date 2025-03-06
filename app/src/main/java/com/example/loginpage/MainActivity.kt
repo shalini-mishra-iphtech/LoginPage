@@ -19,20 +19,19 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-       // loadFragment(LoginFragment())
-        loadFragment(RegisterFragment())
+       loadFragment(LoginFragment())
+
     }
-   /*fun loadFragment(fragment: Fragment) {
+   fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.login_container, fragment)  // add fragment_container is in activity_main.xml
+            .replace(R.id.login_container ,fragment)  // add fragment_container is in activity_main.xml
             .commit()
     }
 
-*/
-    fun loadFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.register_container, fragment)  // add fragment_container is in activity_main.xml
-            .commit()
-    }
+
 
 }
+
+
+
+

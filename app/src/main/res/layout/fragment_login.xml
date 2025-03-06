@@ -65,7 +65,7 @@
             app:startIconDrawable="@drawable/baseline_email_24"
          >
 
-            <!--this is the actual edit text which takes the input-->
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text"
                 android:layout_width="match_parent"
@@ -117,7 +117,7 @@
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="400dp" />
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Forget Password?"
@@ -131,15 +131,17 @@
             android:layout_height="wrap_content"
             android:text="Dont't have account yet?"
             android:gravity="center"
+
             android:layout_marginTop="80dp"
             />
 
-        <Button
+        <TextView
             android:id="@+id/register"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
+
             android:text="Register"
+            android:layout_gravity="center"
             android:textColor="#F26E6E"
             android:textSize="25dp" />
 
