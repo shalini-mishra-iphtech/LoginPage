@@ -14,6 +14,7 @@ class LoginFragment : Fragment() {
 
    lateinit var registerBtn: TextView
    lateinit var forgetPasswordBtn:TextView
+   lateinit var homeFragment: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +35,10 @@ class LoginFragment : Fragment() {
         forgetPasswordBtn=view.findViewById(R.id.textView4)
         forgetPasswordBtn.setOnClickListener{
             (activity as? MainActivity)?.loadFragment(ForgetPasswordFragment())
+        }
+        homeFragment=view.findViewById(R.id.login)
+        homeFragment.setOnClickListener{
+            (activity as? MainActivity)?.loadFragment(HomeFragment())
         }
     }
 
